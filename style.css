@@ -25,14 +25,14 @@ a {
     font-size: 1.2rem;
 
     &:hover {
-        color: royalblue;
-        /* text-decoration: underline; */
+        text-decoration: underline;
     }
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 nav {
@@ -40,6 +40,7 @@ nav {
 }
 
 nav ul {
+    position: fixed;
     list-style-type: none;
     margin: 0;
     width: 40%;
@@ -49,7 +50,6 @@ nav ul {
     gap: 3em;
     padding: 2em 3em;
     background: white;
-    position: fixed;
     z-index: 999;
     top: 0;
     right: 0;
@@ -134,8 +134,19 @@ footer {
     top: 0;
 }
 
-/* @media (min-width: 750px) {
-    body {
-        background: black;
+@media (min-width: 1025px) {
+    .hide-desktop {
+        display: none;
     }
-} */
+
+    nav ul {
+        height: auto;
+        width: auto;
+        position: unset;
+        flex-direction: row;
+        transform: translateX(0%);
+        justify-content: space-evenly;
+        padding: 1em;
+        background: unset;
+    }
+}
