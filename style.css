@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inter;
+}
+
+html, body {
+
+    height: 100%;
+    width: 100%;
+    background-color: whitesmoke;
+    font-family: inter;
+}
+
+.wrap {
+    margin: 2em;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+    &:hover {
+        color: royalblue;
+        /* text-decoration: underline; */
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    width: 40%;
+    display: flex;
+    text-align:end;
+    flex-direction: column;
+    gap: 3em;
+    padding: 2em 3em;
+    background: white;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateX(100%);
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+nav ul.open {
+    transform: translateX(0%);
+}
+
+li {
+    &:nth-of-type(1) {
+        margin-bottom: 2em;
+    }
+}
+
+main {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2em;
+    padding: 2em;
+
+    h1 {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
+
+    a.primary-cta {
+        padding: 0.5em;
+        font-size: 2rem;
+        background: #FFA800;
+        border-radius: .3em;
+        margin: auto;
+    }
+
+}
+
+.cat {
+    display: flex;
+    justify-content: center;
+    padding: 2em;
+    position: relative;
+    img {
+        width: 70%;
+        z-index: 99;
+    }
+
+    .inner-circle, .outer-circle {
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .inner-circle {
+        margin-top: 30%;
+        width: 50%;
+        height: 70%;
+        z-index: 4;
+        background: #ffebc3;
+    }
+
+    .outer-circle {
+        width: 100%;
+        height: 150%;
+        background: rgba(57, 219, 203, 0.096);
+        /* border: 1px dotted black; */
+    }
+}
+
+footer {
+    position: sticky;
+    top: 0;
+}
+
+/* @media (min-width: 750px) {
+    body {
+        background: black;
+    }
+} */
